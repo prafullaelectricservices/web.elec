@@ -1,0 +1,425 @@
+/**
+ * ============================================================================
+ * 3D SERVICE CARD & HERO GLASSMORPHIC CARD INTERACTIONS
+ * PRAFULLA ELECTRICAL SERVICES
+ * ============================================================================
+ *
+ * Features:
+ * - Dynamic cursor-tracked 3D tilt
+ * - Multi-layer depth parallax
+ * - Control room viewport backdrop
+ * - Glassmorphic engineer card with specular reflection highlight
+ * - Metallic brass embossed plaque
+ * - Clean electrical yellow accent (#F5B91C)
+ * - Touch-safe fallbacks
+ * - Reduced-motion safe
+ * ============================================================================
+ */
+
+/* ==========================================================================
+   HERO 3D CONTROL ROOM & GLASSMORPHIC ENGINEER CARD
+   ========================================================================== */
+
+.hero-visual-wrapper {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1400px;
+}
+
+.hero-3d-scene {
+  position: relative;
+  width: min(100%, 620px);
+  aspect-ratio: 16 / 11;
+  min-height: 500px;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(245, 185, 28, 0.45);
+  box-shadow: 0 30px 70px rgba(7, 19, 33, 0.24);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  isolation: isolate;
+  background: #090e17 url('../images/projects/commercial-switchgear.jpg') center center / cover no-repeat;
+}
+
+/* Control Room Backdrop Layer */
+.room-backdrop {
+  position: absolute;
+  inset: 0;
+  background: url('../images/projects/cctv-control-room.jpg') center center / cover no-repeat;
+  opacity: 0.85;
+  z-index: 1;
+}
+
+.room-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(8, 14, 24, 0.45) 0%, rgba(4, 8, 15, 0.78) 100%);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  z-index: 2;
+}
+
+.ambient-glow {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(245, 185, 28, 0.25) 0%, transparent 70%);
+  top: 8%;
+  right: 15%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Floating 3D Engineer Glassmorphic Card */
+.engineer-glass-card {
+  position: relative;
+  z-index: 5;
+  width: min(85%, 310px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform-style: preserve-3d;
+  transition: transform 0.12s ease-out;
+  cursor: grab;
+  will-change: transform;
+}
+
+.engineer-glass-card:active {
+  cursor: grabbing;
+}
+
+.glass-card-inner {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(
+    145deg,
+    rgba(26, 32, 44, 0.72),
+    rgba(13, 17, 24, 0.88)
+  );
+  border: 1.5px solid rgba(245, 185, 28, 0.75);
+  border-radius: 20px;
+  padding: 16px 18px;
+  box-shadow: 
+    0 24px 50px rgba(0, 0, 0, 0.6),
+    inset 0 0 20px rgba(245, 185, 28, 0.1);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+
+.card-glare {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 255, 255, 0.22) 0%,
+    transparent 65%
+  );
+  pointer-events: none;
+  z-index: 6;
+}
+
+/* Portrait Depth Layer */
+.card-portrait-wrap {
+  width: 100%;
+  height: 190px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 14px;
+  transform: translateZ(36px);
+  background: #18181b;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+}
+
+.card-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+
+/* Typography Depth Layer */
+.card-info-wrap {
+  transform: translateZ(48px);
+  color: #ffffff;
+  text-align: left;
+}
+
+.card-engineer-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #f6c344;
+  margin: 0 0 3px 0;
+  letter-spacing: 0.3px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card-engineer-title {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #f3f4f6;
+  margin: 0;
+}
+
+.card-engineer-sub {
+  font-size: 0.74rem;
+  color: #94a3af;
+  margin: 0 0 12px 0;
+}
+
+.card-quote-box {
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  padding-top: 10px;
+}
+
+.card-quote {
+  font-size: 0.74rem;
+  line-height: 1.4;
+  font-style: italic;
+  color: #d1d5db;
+  margin: 0 0 6px 0;
+}
+
+.card-signature {
+  font-family: 'Dancing Script', cursive, sans-serif;
+  font-size: 1.25rem;
+  color: #f6c344;
+  display: block;
+  text-align: right;
+  letter-spacing: 0.5px;
+}
+
+/* Embossed Metallic Gold Plaque */
+.gold-nameplate {
+  margin-top: 16px;
+  transform: translateZ(58px);
+  background: linear-gradient(180deg, #f3cf7a 0%, #b88628 50%, #dfa83b 100%);
+  color: #1c1505;
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: 2px;
+  padding: 8px 30px;
+  border-radius: 4px;
+  border: 1px solid #ffe299;
+  box-shadow: 
+    0 10px 22px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.65);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+/* Responsive Rules for Hero 3D Card */
+@media (max-width: 1023px) {
+  .hero-3d-scene {
+    width: min(100%, 560px);
+    border-radius: 24px;
+    min-height: 480px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-visual-wrapper {
+    margin-top: 24px;
+  }
+
+  .hero-3d-scene {
+    width: 100%;
+    border-radius: 20px;
+    min-height: 450px;
+  }
+
+  .engineer-glass-card {
+    width: 270px;
+  }
+
+  .card-portrait-wrap {
+    height: 165px;
+  }
+
+  .card-engineer-name {
+    font-size: 1.18rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-3d-scene {
+    border-radius: 16px;
+    min-height: 420px;
+  }
+
+  .engineer-glass-card {
+    width: 245px;
+  }
+
+  .card-portrait-wrap {
+    height: 145px;
+  }
+
+  .gold-nameplate {
+    padding: 6px 20px;
+    font-size: 0.74rem;
+  }
+}
+
+
+/* ==========================================================================
+   3D SERVICE CARD INTERACTION
+   ========================================================================== */
+
+.card-3d-wrap {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+  height: 100%;
+}
+
+.service-card-3d {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 32px 28px;
+  transform-style: preserve-3d;
+  transform:
+    rotateX(var(--rx, 0deg))
+    rotateY(var(--ry, 0deg))
+    translateY(var(--ty, 0px))
+    translateZ(var(--tz, 0px));
+  transition:
+    transform 0.18s cubic-bezier(0.2, 0.8, 0.4, 1),
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+  box-shadow:
+    0 8px 24px -4px rgba(13, 23, 38, 0.08),
+    0 2px 6px -1px rgba(13, 23, 38, 0.04);
+  will-change: transform;
+  border: 1px solid rgba(13, 23, 38, 0.09);
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* Hover State */
+.card-3d-wrap:hover .service-card-3d {
+  border-color: rgba(245, 185, 28, 0.55);
+  box-shadow:
+    0 24px 48px -10px rgba(13, 23, 38, 0.16),
+    0 0 0 1px rgba(245, 185, 28, 0.35);
+}
+
+/* Professional Specular Highlight */
+.card-specular-light {
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  background:
+    radial-gradient(
+      circle 260px at var(--mx, 50%) var(--my, 50%),
+      rgba(245, 185, 28, 0.12) 0%,
+      rgba(255, 255, 255, 0.35) 30%,
+      transparent 75%
+    );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 1;
+}
+
+.card-3d-wrap:hover .card-specular-light {
+  opacity: 1;
+}
+
+/* 3D Parallax Depth */
+.card-3d-icon {
+  transform: translateZ(32px);
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.4, 1);
+  will-change: transform;
+}
+
+.card-3d-num {
+  transform: translateZ(20px);
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.4, 1);
+}
+
+.card-3d-content {
+  transform: translateZ(16px);
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.4, 1);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-3d-action {
+  transform: translateZ(26px);
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.4, 1);
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+
+/* ==========================================================================
+   MOBILE / TOUCH DEVICES
+   ========================================================================== */
+
+@media (hover: none) or (pointer: coarse) {
+  .service-card-3d,
+  .engineer-glass-card {
+    transform: none !important;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .card-3d-icon,
+  .card-3d-num,
+  .card-3d-content,
+  .card-3d-action {
+    transform: none !important;
+  }
+
+  .service-card-3d:active {
+    transform:
+      translateY(-4px)
+      scale(0.99) !important;
+    border-color: #f5b91c;
+    box-shadow:
+      0 12px 24px -6px
+      rgba(245, 185, 28, 0.2);
+  }
+
+  .card-specular-light {
+    display: none;
+  }
+}
+
+
+/* ==========================================================================
+   ACCESSIBILITY - REDUCED MOTION
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card-3d,
+  .engineer-glass-card {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .card-3d-icon,
+  .card-3d-num,
+  .card-3d-content,
+  .card-3d-action {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .card-specular-light {
+    display: none !important;
+  }
+}
