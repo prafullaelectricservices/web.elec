@@ -1,0 +1,1729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#0D1726">
+  
+  <!-- Security Features & Protections -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  
+  <!-- SEO Primary Meta Tags -->
+  <title>Prafulla Electrical Services | Prafulla Zanzane - Certified Electrician &amp; Contractor Pune</title>
+  <meta name="title" content="Prafulla Electrical Services | Prafulla Zanzane - Certified Electrician &amp; Contractor Pune">
+  <meta name="description" content="Prafulla Electrical Services in Pune city by Prafulla Zanzane. Expert electrical services, whole house wiring, repairs, CCTV, lighting, commercial, warehouse, earthing, lightning protection &amp; AMC. Call/WhatsApp 8080305801.">
+  <meta name="keywords" content="Prafulla Electrical Services, Prafulla Zanzane, electrician Pune, electrical contractor Pune, whole house wiring Pune, CCTV installation Pune, warehouse electrical Pune, lightning protection Pune, earthing system Pune, electrical repair 8080305801">
+  <meta name="author" content="Prafulla Zanzane">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://prafullaelectrical.com">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://prafullaelectrical.com">
+  <meta property="og:title" content="Prafulla Electrical Services | Prafulla Zanzane Pune">
+  <meta property="og:description" content="Certified electrical engineering solutions in Pune city for residential, commercial, and warehouse properties. Call/WhatsApp 8080305801.">
+  <meta property="og:image" content="assets/images/business-card.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://prafullaelectrical.com">
+  <meta property="twitter:title" content="Prafulla Electrical Services | Prafulla Zanzane Pune">
+  <meta property="twitter:description" content="Certified electrical engineering solutions in Pune city for residential, commercial, and warehouse properties. Call/WhatsApp 8080305801.">
+  <meta property="twitter:image" content="assets/images/business-card.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/card-3d.css">
+  <link rel="stylesheet" href="assets/css/visual-polish.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <style>
+    /* ================================================================
+       3D CONTROL ROOM & GLASSMORPHIC ENGINEER CARD HERO
+       ================================================================ */
+
+    .hero-visual-wrapper {
+      width: 100%;
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      perspective: 1400px;
+      padding: 15px 0;
+    }
+
+    /* 3D Glassmorphic Floating Engineer Card */
+    .engineer-card-3d {
+      position: relative;
+      z-index: 5;
+      width: min(100%, 310px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transform-style: preserve-3d;
+      transition: transform 0.12s ease-out;
+      cursor: grab;
+      will-change: transform;
+    }
+
+    .engineer-card-3d:active {
+      cursor: grabbing;
+    }
+
+    .engineer-card-inner {
+      position: relative;
+      width: 100%;
+      background: linear-gradient(
+        155deg,
+        rgba(30, 38, 52, 0.72) 0%,
+        rgba(15, 20, 30, 0.88) 100%
+      );
+      border: 1.5px solid rgba(245, 185, 28, 0.8);
+      border-radius: 20px;
+      padding: 15px 16px;
+      box-shadow: 
+        0 22px 48px rgba(0, 0, 0, 0.65),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35),
+        inset 0 0 16px rgba(245, 185, 28, 0.12);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      transform-style: preserve-3d;
+      overflow: hidden;
+    }
+
+    /* Interactive Specular Glare */
+    .card-specular-glare {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(255, 255, 255, 0.24) 0%,
+        transparent 65%
+      );
+      pointer-events: none;
+      z-index: 6;
+    }
+
+    /* Card Layer 1: Portrait */
+    .card-portrait-box {
+      width: 100%;
+      height: 185px;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 12px;
+      transform: translateZ(36px);
+      background: #14171f;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.5);
+    }
+
+    .card-portrait-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 18%;
+      display: block;
+    }
+
+    /* Card Layer 2: Typography & Bio */
+    .card-bio-content {
+      transform: translateZ(48px);
+      color: #ffffff;
+      text-align: left;
+    }
+
+    .card-name {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #f6c344;
+      margin: 0 0 2px 0;
+      letter-spacing: 0.3px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .card-title {
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: #f3f4f6;
+      margin: 0;
+    }
+
+    .card-sub {
+      font-size: 0.74rem;
+      color: #94a3b8;
+      margin: 0 0 10px 0;
+    }
+
+    .card-quote-divider {
+      border-top: 1px solid rgba(245, 185, 28, 0.25);
+      padding-top: 8px;
+    }
+
+    .card-quote {
+      font-size: 0.73rem;
+      line-height: 1.38;
+      font-style: italic;
+      color: #cbd5e1;
+      margin: 0 0 4px 0;
+    }
+
+    .card-signature {
+      font-family: 'Dancing Script', cursive, sans-serif;
+      font-size: 1.25rem;
+      color: #f6c344;
+      display: block;
+      text-align: right;
+      letter-spacing: 0.5px;
+    }
+
+    /* Card Layer 3: Embossed Metallic Brass Plaque */
+    .gold-nameplate {
+      margin-top: 14px;
+      transform: translateZ(58px);
+      background: linear-gradient(180deg, #f6d482 0%, #b88628 50%, #e0ab3c 100%);
+      color: #1a1405;
+      font-weight: 800;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      padding: 7px 28px;
+      border-radius: 4px;
+      border: 1px solid #ffe8aa;
+      box-shadow: 
+        0 10px 22px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.65);
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+    }
+
+    @media (max-width: 767px) {
+      .hero-visual-wrapper {
+        margin-top: 24px;
+      }
+
+      .engineer-card-3d {
+        width: 280px;
+      }
+
+      .card-portrait-box {
+        height: 170px;
+      }
+
+      .card-name {
+        font-size: 1.15rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .engineer-card-3d {
+        width: 260px;
+      }
+
+      .card-portrait-box {
+        height: 155px;
+      }
+
+      .gold-nameplate {
+        padding: 6px 18px;
+        font-size: 0.72rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .engineer-card-3d {
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- STICKY SITE HEADER -->
+  <header class="site-header" role="banner">
+    <div class="container header-container">
+      <a href="#hero" class="logo-link" aria-label="Prafulla Electrical Services - Home">
+        <img src="assets/images/logo.png" alt="Prafulla Electrical Services Logo" class="logo-img" width="44" height="44">
+        <div class="logo-text-group">
+          <span class="logo-title cfg-company">Prafulla Electrical Services</span>
+          <span class="logo-subtitle"><span class="live-dot" style="margin-right: 6px;"></span>Your Trusted Electrical Experts • Pune</span>
+        </div>
+      </a>
+
+      <!-- Navigation Menu -->
+      <nav id="nav-menu" class="nav-menu" role="navigation" aria-label="Main Navigation">
+        <div class="nav-desktop">
+          <a href="#hero" class="nav-link is-active">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#why-us" class="nav-link">Why Us</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#process" class="nav-link">Process</a>
+          <a href="#credentials" class="nav-link">Credentials</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <div class="header-cta-group">
+          <a href="#quote" class="btn btn-secondary btn-sm">GET A QUOTE</a>
+        </div>
+      </nav>
+
+      <!-- Hamburger Button (Mobile) -->
+      <button id="nav-toggle" class="nav-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+  <div id="nav-overlay" class="nav-overlay" aria-hidden="true"></div>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+    
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section" aria-labelledby="hero-heading">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="eyebrow"><span class="live-dot" style="margin-right: 6px;"></span>EXPERT ELECTRICAL SERVICES | PUNE CITY</div>
+          <h1 id="hero-heading" class="hero-title">
+            Reliable electrical solutions. <span class="highlight">Done professionally.</span>
+          </h1>
+          <p class="hero-lead">
+            Certified electrical engineering &amp; contractor services in Pune city led by <strong>Prafulla Zanzane</strong>. Whole house wiring, commercial &amp; warehouse electricals, CCTV surveillance, architectural lighting, earthing &amp; lightning protection, and 24/7 emergency repair support.
+          </p>
+          <div class="hero-actions">
+            <a href="#quote" class="btn btn-secondary">GET A FREE QUOTE</a>
+            <a href="#book" class="btn btn-primary">BOOK A SERVICE</a>
+          </div>
+          
+          <!-- Trust Indicators -->
+          <div class="hero-trust-indicators">
+            <div class="trust-check-item">
+              <span class="trust-check-icon">✓</span>
+              <span>Pune City Wide Service</span>
+            </div>
+            <div class="trust-check-item">
+              <span class="trust-check-icon">✓</span>
+              <span>9 AM – 5 PM + Emergency Support</span>
+            </div>
+            <div class="trust-check-item">
+              <span class="trust-check-icon">✓</span>
+              <span>Safety First &amp; Guaranteed</span>
+            </div>
+            <div class="trust-check-item">
+              <span class="trust-check-icon">✓</span>
+              <span>Direct WhatsApp &amp; Call 8080305801</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ENGINEER PROFILE CARD -->
+        <div class="hero-visual-wrapper" id="heroVisualWrapper" aria-label="Engineer profile card">
+          <!-- Floating 3D Engineer Card -->
+          <div class="engineer-card-3d" id="engineerCard3D">
+            <div class="engineer-card-inner">
+              
+              <!-- Dynamic Lighting Glare -->
+              <div class="card-specular-glare"></div>
+
+              <!-- Layer 1: Portrait Image (EDITABLE FOR REAL OWNER IMAGE) -->
+              <div class="card-portrait-box">
+                <!-- ======================================================== -->
+                <!-- Replace this placeholder with an approved owner photo when available. -->
+                <!-- ======================================================== -->
+                <img 
+                  id="heroOwnerImage"
+                  src="assets/images/profile.webp"
+                  alt="Prafulla Zanzane, Electrical Engineer and Founder"
+                  fetchpriority="high"
+                  decoding="async"
+                  width="3024"
+                  height="4032"
+                />
+              </div>
+
+              <!-- Layer 2: Typography & Bio -->
+              <div class="card-bio-content">
+                <h3 class="card-name">Prafulla Zanzane</h3>
+                <p class="card-title">Certified Electrical Engineer</p>
+                <p class="card-sub">Founder, Expert Electrical Services</p>
+                
+                <div class="card-quote-divider">
+                  <p class="card-quote">"Reliability is built on safety. That is my promise to you."</p>
+                  <span class="card-signature">Prafulla</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Layer 3: Embossed Metallic Brass Plaque -->
+            <div class="gold-nameplate">
+              <span>PRAFULLA ZANZANE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <section class="trust-bar-section" aria-label="Trust & Credentials Highlights">
+      <div class="container">
+        <div class="trust-bar-grid">
+          <div class="trust-bar-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Certified Electricians</span>
+          </div>
+          <div class="trust-bar-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Fast Response</span>
+          </div>
+          <div class="trust-bar-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <span>Safety First</span>
+          </div>
+          <div class="trust-bar-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Guaranteed Work</span>
+          </div>
+          <div class="trust-bar-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m9 12 2 2 4-4"/></svg>
+            <span>MSME / SGSU Credentials</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="section" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">ENGINEERED CAPABILITIES</div>
+          <h2 id="services-heading" class="section-title">Electrical services for every requirement.</h2>
+          <p class="section-subtitle">
+            Engineered for durability, code-compliance, and maximum electrical safety across residential, commercial, and industrial sites.
+          </p>
+        </div>
+
+        <!-- 9 Interactive 3D Service Cards + 1 AMC Program Banner -->
+        <div class="services-grid">
+          
+          <!-- Card 1: Expert Electrical Services -->
+          <div class="card-3d-wrap">
+            <article class="service-card-3d" tabindex="0">
+              <div class="card-specular-light"></div>
+              <div class="service-card-top">
+                <div class="service-icon-box card-3d-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                </div>
+                <span class="service-number card-3d-num">01</span>
+              </div>
+              <div class="card-3d-content">
+                <h3 class="service-title">Expert Electrical Services</h3>
+                <p class="service-desc">
+                  Engineering-grade consultations, load audits, short-circuit protection, high-efficiency distribution design, and certified safety inspections.
+                </p>
+              </div>
+              <div class="card-3d-action">
+                <a href="#quote" class="service-link" data-select-service="Expert Electrical Services">
+                  <span>Request Service</span>
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 2: Electrical Repairs -->
+          <div class="card-3d-wrap">
+            <article class="service-card-3d" tabindex="0">
+              <div class="card-specular-light"></div>
+              <div class="service-card-top">
+                <div class="service-icon-box card-3d-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                </div>
+                <span class="service-number card-3d-num">02</span>
+              </div>
+              <div class="card-3d-content">
+                <h3 class="service-title">Electrical Repairs</h3>
+                <p class="service-desc">
+                  Fast emergency diagnosis and safe resolution of short circuits, tripping breakers, burning smells, damaged wiring, and panel faults.
+                </p>
+              </div>
+              <div class="card-3d-action">
+                <a href="#quote" class="service-link" data-select-service="Electrical Repairs">
+                  <span>Request Service</span>
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 3: Whole House Wiring -->
+          <div class="card-3d-wrap">
+            <article class="service-card-3d" tabindex="0">
+              <div class="card-specular-light"></div>
+              <div class="service-card-top">
+                <div class="service-icon-box card-3d-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                </div>
+                <span class="service-number card-3d-num">03</span>
+              </div>
+              <div class="card-3d-content">
+                <h3 class="service-title">Whole House Wiring</h3>
+                <p class="service-desc">
+                  Complete concealed conduit and surface wiring for new constructions, renovations, and rewiring projects with safety load calculation.
+                </p>
+              </div>
+              <div class="card-3d-action">
+                <a href="#quote" class="service-link" data-select-service="Whole House Wiring">
+                  <span>Request Service</span>
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 4: Indoor & Outdoor Lighting -->
+          <div class="card-3d-wrap">
+            <article class="service-card-3d" tabindex="0">
+              <div class="card-specular-light"></div>
+              <div class="service-card-top">
+                <div class="service-icon-box card-3d-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg>
+                </div>
+                <span class="service-number card-3d-num">04</span>
+              </div>
+              <div class="card-3d-content">
+                <h3 class="service-title">Indoor &amp; Outer Lighting</h3>
+                <p class="service-desc">
+                  Architectural LED design, cove lighting, weatherproof outdoor bollards, floodlights, smart dimmers, and garden landscape lighting.
+                </p>
+              </div>
+              <div class="card-3d-action">
+                <a href="#quote" class="service-link" data-select-service="Indoor and Outer Lighting">
+                  <span>Request Service</span>
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 5: Residential Electrical Services -->
+          <div class="card-3d-wrap">
+            <article class="service-card-3d" tabindex="0">
+              <div class="card-specular-light"></div>
+              <div class="service-card-top">
+                <div class="service-icon-box card-3d-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                </div>
+                <span class="service-number card-3d-num">05</span>
+              </div>
+              <div class="card-3d-content">
+                <h3 class="service-title">Residential Electrical</h3>
+                <p class="service-desc">
+                  Home appliance installations, MCB distribution board upgrades, inverter/UPS wiring, AC point additions, and home electrical safety audits.
+                </p>
+              </div>
+              <div class="card-3d-action">
+                <a href="#quote" class="service-link" data-select-service="Residential Electrical">
+                  <span>Request Service</span>
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 6: Commercial Electrical Services -->
+          <div class="card-3d-wrap">
+            <article class="service-card-3d" tabindex="0">
+              <div class="card-specular-light"></div>
+              <div class="service-card-top">
+                <div class="service-icon-box card-3d-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                </div>
+                <span class="service-number card-3d-num">06</span>
+              </div>
+              <div class="card-3d-content">
+                <h3 class="service-title">Commercial Electrical</h3>
+                <p class="service-desc">
+                  Three-phase commercial fit-outs, main switchgear panel building, office workstation power distribution, and backup generator transfers.
+                </p>
+              </div>
+              <div class="card-3d-action">
+                <a href="#quote" class="service-link" data-select-service="Commercial Electrical">
+                  <span>Request Service</span>
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 7: CCTV & Data Surveillance -->
+          <div class="card-3d-wrap">
+            <article class="service-card-3d" tabindex="0">
+              <div class="card-specular-light"></div>
+              <div class="service-card-top">
+                <div class="service-icon-box card-3d-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                </div>
+                <span class="service-number card-3d-num">07</span>
+              </div>
+              <div class="card-3d-content">
+                <h3 class="service-title">CCTV &amp; Data Surveillance</h3>
+                <p class="service-desc">
+                  High-definition IP cameras, NVR/DVR setups, Cat6 structured data cabling, remote smartphone live monitoring, and network rack setup.
+                </p>
+              </div>
+              <div class="card-3d-action">
+                <a href="#quote" class="service-link" data-select-service="CCTV and Data Surveillance">
+                  <span>Request Service</span>
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 8: Warehouse Electrification -->
+          <div class="card-3d-wrap">
+            <article class="service-card-3d" tabindex="0">
+              <div class="card-specular-light"></div>
+              <div class="service-card-top">
+                <div class="service-icon-box card-3d-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                </div>
+                <span class="service-number card-3d-num">08</span>
+              </div>
+              <div class="card-3d-content">
+                <h3 class="service-title">Warehouse Electrification</h3>
+                <p class="service-desc">
+                  Heavy industrial cable trays, high-bay LED lighting, 3-phase machinery hookups, and high-capacity main distribution panels.
+                </p>
+              </div>
+              <div class="card-3d-action">
+                <a href="#quote" class="service-link" data-select-service="Warehouse Electrical">
+                  <span>Request Service</span>
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 9: Earthing & Lightning Protection -->
+          <div class="card-3d-wrap">
+            <article class="service-card-3d" tabindex="0">
+              <div class="card-specular-light"></div>
+              <div class="service-card-top">
+                <div class="service-icon-box card-3d-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="2" x2="12" y2="14"/><line x1="4" y1="14" x2="20" y2="14"/><line x1="7" y1="18" x2="17" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/></svg>
+                </div>
+                <span class="service-number card-3d-num">09</span>
+              </div>
+              <div class="card-3d-content">
+                <h3 class="service-title">Earthing &amp; Lightning Protection</h3>
+                <p class="service-desc">
+                  Chemical and copper plate earth pit construction, low-resistance grounding, copper down-conductors, and building lightning arresters.
+                </p>
+              </div>
+              <div class="card-3d-action">
+                <a href="#quote" class="service-link" data-select-service="Earthing & Lightning Protection">
+                  <span>Request Service</span>
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+        </div>
+
+        <!-- Featured Service Call Banner -->
+        <section class="amc-banner-card" aria-labelledby="service-banner-heading">
+          <div class="amc-banner-content">
+            <div class="amc-eyebrow">NEED A SERVICE?</div>
+            <h3 id="service-banner-heading">We’re Just a Call Away</h3>
+            <p>Get quick support for any electrical issue.</p>
+
+            <div class="amc-actions" aria-label="Contact options">
+              <a class="amc-btn amc-btn-call cfg-phone-link" href="tel:+918080305801">
+                <span class="amc-btn-icon amc-phone-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </span>
+                <span>Call Now</span>
+              </a>
+
+              <a class="amc-btn amc-btn-wa cfg-wa-link" href="https://wa.me/918080305801" target="_blank" rel="noopener noreferrer">
+                <span class="amc-btn-icon amc-wa-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.52 3.48A11.86 11.86 0 0 0 12.05 0C5.5 0 .17 5.33.17 11.89c0 2.1.55 4.15 1.59 5.96L.06 24l6.3-1.65a11.9 11.9 0 0 0 5.69 1.45h.01c6.55 0 11.88-5.33 11.88-11.89 0-3.18-1.24-6.17-3.42-8.43ZM12.06 21.8h-.01a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-3.74.98 1-3.65-.23-.37a9.87 9.87 0 0 1-1.51-5.28C2.16 6.42 6.59 2 12.05 2a9.86 9.86 0 0 1 7.02 2.91 9.9 9.9 0 0 1 2.9 7.04c0 5.46-4.43 9.89-9.91 9.89Zm5.42-7.42c-.3-.15-1.77-.87-2.05-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.96 1.17-.18.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.46-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.08-.15-.68-1.64-.93-2.24-.24-.59-.49-.51-.68-.52h-.58c-.2 0-.52.07-.8.37-.28.3-1.04 1.02-1.04 2.5s1.07 2.91 1.22 3.11c.15.2 2.1 3.21 5.09 4.5.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.08-.12-.28-.2-.58-.35Z"></path>
+                  </svg>
+                </span>
+                <span>Chat on WhatsApp</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="amc-banner-visual" aria-hidden="true"></div>
+        </section>
+
+      </div>
+    </section>
+
+    <!-- ABOUT / ENGINEER SECTION -->
+    <section id="about" class="section about-section" aria-labelledby="about-heading">
+      <div class="container about-grid">
+        
+        <!-- Engineer Photo Container -->
+        <div class="engineer-photo-container">
+          <img src="assets/images/profile.webp" alt="Prafulla Zanzane, Electrical Engineer and Founder" width="3024" height="4032" loading="lazy" decoding="async">
+          <div class="engineer-badge-overlay">
+            <div class="engineer-name-title cfg-engineer">Prafulla Zanzane</div>
+            <div class="engineer-role-desc">Electrical Engineer &amp; Founder • Pune</div>
+          </div>
+        </div>
+
+        <!-- Engineer Philosophy & Pillars -->
+        <div class="about-text-content">
+          <div class="eyebrow">ABOUT THE FOUNDER &amp; PROPRIETOR</div>
+          <h2 id="about-heading" class="section-title">An electrical business with an engineer's approach.</h2>
+          <p class="section-subtitle">
+            Founded by <strong>Prafulla Zanzane</strong>, Prafulla Electrical Services brings certified electrical engineering expertise, safety compliance, and reliable contracting to Pune city.
+          </p>
+          <p style="margin-top: 16px; color: var(--color-text-muted);">
+            Electrical installations are the backbone of safety and operations for homes, commercial offices, and industrial warehouses. From whole-house wiring and architectural lighting to complex 3-phase machinery setups, CCTV data networks, and earthing protection, every job is executed to the highest engineering standards.
+          </p>
+
+          <!-- 4 Trust Pillars -->
+          <div class="about-pillars-grid">
+            <div class="pillar-item">
+              <div class="pillar-num">01</div>
+              <h3 class="pillar-title">Certified &amp; Qualified</h3>
+              <p class="pillar-desc">Formal electrical engineering qualifications backed by MSME registration and SGSU skill credentials.</p>
+            </div>
+            <div class="pillar-item">
+              <div class="pillar-num">02</div>
+              <h3 class="pillar-title">Fast Response in Pune</h3>
+              <p class="pillar-desc">Operating 9:00 AM – 5:00 PM with emergency breakdown assistance available across Pune city.</p>
+            </div>
+            <div class="pillar-item">
+              <div class="pillar-num">03</div>
+              <h3 class="pillar-title">Safety &amp; Compliance</h3>
+              <p class="pillar-desc">Strict adherence to Indian Electricity Rules, breaker ratings, conduit insulation, and earth resistance.</p>
+            </div>
+            <div class="pillar-item">
+              <div class="pillar-num">04</div>
+              <h3 class="pillar-title">Direct Owner Contact</h3>
+              <p class="pillar-desc">Speak directly with Prafulla Zanzane on <strong>8080305801</strong> for honest advice and guaranteed workmanship.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- WHY US SECTION -->
+    <section id="why-us" class="section" aria-labelledby="why-us-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">THE ENGINEERING ADVANTAGE</div>
+          <h2 id="why-us-heading" class="section-title">Why customers choose us.</h2>
+          <p class="section-subtitle">
+            Reliable, code-compliant, and transparent electrical contracting designed for long-term safety.
+          </p>
+        </div>
+
+        <div class="why-us-grid">
+          <!-- Card 1 -->
+          <div class="why-card">
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3 class="why-title">Certified Expertise</h3>
+            <p class="why-desc">Professional electrical knowledge and practical experience across small to heavy-duty power setups.</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="why-card">
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3 class="why-title">Fast Response</h3>
+            <p class="why-desc">Same-day service may be available for eligible urgent requirements and critical electrical faults.</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="why-card">
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="why-title">Safety First</h3>
+            <p class="why-desc">Safety-focused electrical work, load-balanced circuits, and responsible installation practices.</p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="why-card">
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3 class="why-title">Clear Communication</h3>
+            <p class="why-desc">Transparent scope, clear explanations before commencing work, and no surprise charges.</p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="why-card">
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3 class="why-title">Quality Workmanship</h3>
+            <p class="why-desc">Attention to installation quality, proper insulation, clean conduits, and reliable finishing.</p>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="why-card">
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+            </div>
+            <h3 class="why-title">Reliable Support</h3>
+            <p class="why-desc">Dedicated post-installation warranty support for repairs, turnkey projects, and maintenance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS / PORTFOLIO SECTION -->
+    <section id="projects" class="section" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">WORK SHOWCASE</div>
+          <h2 id="projects-heading" class="section-title">Featured project portfolio.</h2>
+          <p class="section-subtitle">
+            Authentic on-site photography from our electrical contracting, warehouse, lighting, CCTV, and panel engineering projects in Pune.
+          </p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="portfolio-filter-bar" role="tablist" aria-label="Project filter categories">
+          <button class="filter-btn active" data-filter="all">ALL</button>
+          <button class="filter-btn" data-filter="residential">RESIDENTIAL</button>
+          <button class="filter-btn" data-filter="commercial">COMMERCIAL</button>
+          <button class="filter-btn" data-filter="warehouse">WAREHOUSE</button>
+          <button class="filter-btn" data-filter="cctv">CCTV &amp; SURVEILLANCE</button>
+          <button class="filter-btn" data-filter="lighting">LIGHTING</button>
+          <button class="filter-btn" data-filter="repairs">REPAIRS &amp; AMC</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          
+          <!-- Project 1: Residential Wiring -->
+          <div class="project-card" data-category="residential">
+            <div class="project-thumb-wrap">
+              <img src="assets/images/projects/residential-wiring.jpg" alt="Neat residential distribution board wiring with L&T breakers" loading="lazy" decoding="async" width="600" height="400">
+            </div>
+            <div class="project-info">
+              <span class="project-category-tag">RESIDENTIAL</span>
+              <h3 class="project-title">Whole House Wiring &amp; Distribution Board</h3>
+              <p class="project-desc">Clean L&amp;T MCB distribution board installation, phase isolation, and concealed conduit wiring for residential apartments and bungalows in Pune.</p>
+              <a href="#quote" class="project-action-link" data-select-service="Whole House Wiring">
+                <span>Inquire For Residential</span> <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 2: Commercial Switchgear -->
+          <div class="project-card" data-category="commercial">
+            <div class="project-thumb-wrap">
+              <img src="assets/images/projects/commercial-switchgear.jpg" alt="Commercial 3-phase switchgear panel with digital indicators" loading="lazy" decoding="async" width="600" height="400">
+            </div>
+            <div class="project-info">
+              <span class="project-category-tag">COMMERCIAL</span>
+              <h3 class="project-title">Commercial 3-Phase Control Panel &amp; Switchgear</h3>
+              <p class="project-desc">Custom three-phase main switchgear panel with digital metering, surge suppressors, and dedicated office power feeds.</p>
+              <a href="#quote" class="project-action-link" data-select-service="Commercial Electrical">
+                <span>Inquire For Commercial</span> <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 3: Warehouse Illumination -->
+          <div class="project-card" data-category="warehouse">
+            <div class="project-thumb-wrap">
+              <img src="assets/images/projects/warehouse-illumination.jpg" alt="Industrial warehouse high-bay LED lighting installation" loading="lazy" decoding="async" width="600" height="400">
+            </div>
+            <div class="project-info">
+              <span class="project-category-tag">WAREHOUSE</span>
+              <h3 class="project-title">Industrial Warehouse High-Bay Electrification</h3>
+              <p class="project-desc">Heavy-duty overhead cable tray installation, industrial high-bay LED luminaires, and machinery power distribution.</p>
+              <a href="#quote" class="project-action-link" data-select-service="Warehouse Electrical">
+                <span>Inquire For Warehouse</span> <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 4: Warehouse Aisle -->
+          <div class="project-card" data-category="warehouse">
+            <div class="project-thumb-wrap">
+              <img src="assets/images/projects/warehouse-aisle.jpg" alt="Warehouse aisle and storage rack overhead illumination" loading="lazy" decoding="async" width="600" height="400">
+            </div>
+            <div class="project-info">
+              <span class="project-category-tag">WAREHOUSE</span>
+              <h3 class="project-title">Logistics Warehouse Aisle &amp; Rack Lighting</h3>
+              <p class="project-desc">Linear high-efficiency lighting design for warehouse corridors, safety emergency backup lines, and load balancing.</p>
+              <a href="#quote" class="project-action-link" data-select-service="Warehouse Electrical">
+                <span>Inquire For Warehouse</span> <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 5: CCTV Indoor -->
+          <div class="project-card" data-category="cctv">
+            <div class="project-thumb-wrap">
+              <img src="assets/images/projects/cctv-indoor.jpg" alt="Modern indoor corridor CCTV camera installation" loading="lazy" decoding="async" width="600" height="400">
+            </div>
+            <div class="project-info">
+              <span class="project-category-tag">CCTV &amp; SURVEILLANCE</span>
+              <h3 class="project-title">Commercial &amp; Residential HD CCTV Setup</h3>
+              <p class="project-desc">High-definition IP camera installation, structured Cat6 cabling, PoE switch racks, and 24/7 mobile monitoring setup.</p>
+              <a href="#quote" class="project-action-link" data-select-service="CCTV and Data Surveillance">
+                <span>Inquire For CCTV</span> <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 6: CCTV Command Center -->
+          <div class="project-card" data-category="cctv">
+            <div class="project-thumb-wrap">
+              <img src="assets/images/projects/cctv-control-room.jpg" alt="CCTV video surveillance wall control room" loading="lazy" decoding="async" width="600" height="400">
+            </div>
+            <div class="project-info">
+              <span class="project-category-tag">CCTV &amp; DATA</span>
+              <h3 class="project-title">Centralized CCTV Video Wall &amp; Data Monitoring</h3>
+              <p class="project-desc">Multi-channel NVR integration, centralized security monitoring wall, and high-speed enterprise surveillance network.</p>
+              <a href="#quote" class="project-action-link" data-select-service="CCTV and Data Surveillance">
+                <span>Inquire For Surveillance</span> <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 7: Architectural Lighting -->
+          <div class="project-card" data-category="lighting">
+            <div class="project-thumb-wrap">
+              <img src="assets/images/projects/architectural-lighting.jpg" alt="Architectural indoor and outdoor wall lighting sconces display" loading="lazy" decoding="async" width="600" height="400">
+            </div>
+            <div class="project-info">
+              <span class="project-category-tag">LIGHTING</span>
+              <h3 class="project-title">Indoor &amp; Outer Architectural Lighting</h3>
+              <p class="project-desc">Decorative facade wall sconces, modern cove lighting, exterior weatherproof bollards, and smart dimmer automation.</p>
+              <a href="#quote" class="project-action-link" data-select-service="Indoor and Outer Lighting">
+                <span>Inquire For Lighting</span> <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 8: Electrical Repairs -->
+          <div class="project-card" data-category="repairs">
+            <div class="project-thumb-wrap">
+              <img src="assets/images/projects/electrical-repairs.jpg" alt="Electrician diagnosing and repairing industrial control panel" loading="lazy" decoding="async" width="600" height="400">
+            </div>
+            <div class="project-info">
+              <span class="project-category-tag">ELECTRICAL REPAIRS</span>
+              <h3 class="project-title">Emergency Repairs &amp; Machinery Control</h3>
+              <p class="project-desc">Rapid on-site breakdown diagnosis, motor starter servicing, industrial relay wiring, and emergency short-circuit resolution in Pune.</p>
+              <a href="#quote" class="project-action-link" data-select-service="Electrical Repairs">
+                <span>Inquire For Repairs</span> <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 9: Testing & AMC -->
+          <div class="project-card" data-category="repairs">
+            <div class="project-thumb-wrap">
+              <img src="assets/images/projects/circuit-testing.jpg" alt="Multimeter diagnosis and electrical circuit testing" loading="lazy" decoding="async" width="600" height="400">
+            </div>
+            <div class="project-info">
+              <span class="project-category-tag">TESTING &amp; AMC</span>
+              <h3 class="project-title">Multimeter Diagnostics, Earthing &amp; AMC</h3>
+              <p class="project-desc">Insulation resistance testing, earth pit resistance verification, thermal scanning, and preventive maintenance overhaul.</p>
+              <a href="#quote" class="project-action-link" data-select-service="Annual Maintenance / AMC">
+                <span>Inquire For AMC</span> <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section id="process" class="section process-section" aria-labelledby="process-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">OUR METHODOLOGY</div>
+          <h2 id="process-heading" class="section-title">Simple. Clear. Professional.</h2>
+          <p class="section-subtitle">
+            A disciplined 6-step engineering workflow ensuring safety, transparent pricing, and verified quality on every job.
+          </p>
+        </div>
+
+        <div class="process-timeline-grid">
+          <!-- Step 1 -->
+          <div class="process-step-card">
+            <div class="step-number">01</div>
+            <h3 class="step-title">Discuss</h3>
+            <p class="step-desc">Understand your electrical requirements, load demands, and timeline.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="process-step-card">
+            <div class="step-number">02</div>
+            <h3 class="step-title">Inspect</h3>
+            <p class="step-desc">Site visit to evaluate wiring condition, panel capacity, and earthing.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="process-step-card">
+            <div class="step-number">03</div>
+            <h3 class="step-title">Quote</h3>
+            <p class="step-desc">Transparent itemized estimate detailing materials, labor, and schedule.</p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="process-step-card">
+            <div class="step-number">04</div>
+            <h3 class="step-title">Execute</h3>
+            <p class="step-desc">Safe, professional installation following national electrical standards.</p>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="process-step-card">
+            <div class="step-number">05</div>
+            <h3 class="step-title">Test</h3>
+            <p class="step-desc">Insulation resistance, polarity, load balance, and earth testing.</p>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="process-step-card">
+            <div class="step-number">06</div>
+            <h3 class="step-title">Handover</h3>
+            <p class="step-desc">Final walkthrough, circuit diagrams, testing reports, and warranty.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREDENTIALS SECTION -->
+    <section id="credentials" class="section" aria-labelledby="credentials-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">VERIFIED QUALIFICATIONS</div>
+          <h2 id="credentials-heading" class="section-title">Credentials you can trust.</h2>
+          <p class="section-subtitle">
+            Officially connected with Government of India enterprise bodies and technical skill universities.
+          </p>
+        </div>
+
+        <div class="credentials-grid">
+          <!-- Credential 1 -->
+          <div class="credential-card">
+            <img src="assets/images/credentials/msme-badge.svg" alt="Government of India MSME Certification Badge" class="credential-badge-img" loading="lazy" decoding="async" width="400" height="280">
+            <div class="credential-details">
+              <h3 class="credential-header-title">Government of India — MSME</h3>
+              <p class="credential-note">
+                Connected and registered enterprise under the Ministry of Micro, Small and Medium Enterprises, Government of India.
+              </p>
+              <div class="credential-status-tag">
+                <span aria-hidden="true">●</span> Verified MSME Affiliation
+              </div>
+            </div>
+          </div>
+
+          <!-- Credential 2 -->
+          <div class="credential-card">
+            <img src="assets/images/credentials/sgsu-badge.svg" alt="Scope Global Skill University Credential Badge" class="credential-badge-img" loading="lazy" decoding="async" width="400" height="280">
+            <div class="credential-details">
+              <h3 class="credential-header-title">Scope Global Skill University</h3>
+              <p class="credential-note">
+                Formally connected and certified technical skill training partner with Scope Global Skill University.
+              </p>
+              <div class="credential-status-tag">
+                <span aria-hidden="true">●</span> Academic &amp; Skill Certified
+              </div>
+            </div>
+          </div>
+
+          <!-- Credential 3 -->
+          <div class="credential-card">
+            <img src="assets/images/credentials/engineering-badge.svg" alt="Electrical Engineering Qualification Badge" class="credential-badge-img" loading="lazy" decoding="async" width="400" height="280">
+            <div class="credential-details">
+              <h3 class="credential-header-title">Electrical Engineering Qualification</h3>
+              <p class="credential-note">
+                Formal technical engineering qualification ensuring theoretical knowledge, load calculation accuracy, and safety compliance.
+              </p>
+              <div class="credential-status-tag">
+                <span aria-hidden="true">●</span> Engineering Qualified
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="credentials-action-bar">
+          <button type="button" class="btn btn-primary btn-view-credentials">VIEW CREDENTIALS</button>
+          <a href="#contact" class="btn btn-outline">CONTACT US</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTE SECTION (DARK NAVY CTA) -->
+    <section id="quote" class="section quote-section" aria-labelledby="quote-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow eyebrow-dark">INSTANT ESTIMATE REQUEST</div>
+          <h2 id="quote-heading" class="section-title section-title-dark">Tell us what you need.</h2>
+          <p class="section-subtitle section-subtitle-dark">
+            Fill out the form below. Your request will be formatted into an instant WhatsApp message for rapid engineering review and pricing.
+          </p>
+        </div>
+
+        <div class="quote-form-card">
+          <!-- Status Banner for Security / Feedback -->
+          <div id="quote-alert" class="form-status-alert" role="alert" aria-live="polite"></div>
+
+          <form id="quote-form" novalidate>
+            <!-- Anti-Spam Honeypot Field (Invisible to real users, traps bots) -->
+            <div class="hp-field" aria-hidden="true">
+              <label for="quote-hp">Leave this empty</label>
+              <input type="text" id="quote-hp" name="website_hp" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="form-grid">
+              <!-- Name -->
+              <div class="form-group" id="group-quote-name">
+                <label for="quote-name" class="form-label">Your Full Name *</label>
+                <input type="text" id="quote-name" name="name" class="form-control" placeholder="e.g. Rahul Sharma" required autocomplete="name" maxlength="80">
+                <div class="form-error-feedback" id="quote-name-err" aria-live="polite">⚠️ Please enter your full name</div>
+              </div>
+
+              <!-- Phone -->
+              <div class="form-group" id="group-quote-phone">
+                <label for="quote-phone" class="form-label">Phone Number *</label>
+                <input type="tel" id="quote-phone" name="phone" class="form-control" placeholder="e.g. +91 98765 43210" required autocomplete="tel" inputmode="tel" maxlength="20">
+                <div class="form-error-feedback" id="quote-phone-err" aria-live="polite">⚠️ Please enter a valid 10-digit phone number</div>
+              </div>
+
+              <!-- Property Type -->
+              <div class="form-group">
+                <label for="quote-property" class="form-label">Property Type</label>
+                <select id="quote-property" name="property" class="form-control">
+                  <option value="Residential">Residential (Apartment / Independent House)</option>
+                  <option value="Commercial">Commercial (Office / Retail / Clinic)</option>
+                  <option value="Warehouse">Warehouse / Industrial Facility</option>
+                  <option value="Other">Other Property Type</option>
+                </select>
+              </div>
+
+              <!-- Service Required -->
+              <div class="form-group">
+                <label for="quote-service" class="form-label">Service Required</label>
+                <select id="quote-service" name="service" class="form-control">
+                  <option value="Expert Electrical Services">Expert Electrical Services</option>
+                  <option value="Electrical Repairs">Electrical Repairs / Fault Finding</option>
+                  <option value="Whole House Wiring">Whole House Wiring / Rewiring</option>
+                  <option value="Indoor & Outdoor Lighting">Indoor &amp; Outer Lighting</option>
+                  <option value="Residential Electrical">Residential Electrical Services</option>
+                  <option value="Commercial Electrical">Commercial Electrical Fit-Out</option>
+                  <option value="CCTV & Data Surveillance">CCTV &amp; Data Surveillance</option>
+                  <option value="Warehouse Electrical">Warehouse Electrification</option>
+                  <option value="Annual Maintenance / AMC">Annual Maintenance Contracts (AMC)</option>
+                  <option value="Earthing & Lightning Protection">Earthing &amp; Lightning Protection System</option>
+                  <option value="Other">Other Requirement</option>
+                </select>
+              </div>
+
+              <!-- Area / Size -->
+              <div class="form-group">
+                <label for="quote-area" class="form-label">Area / Approximate Size</label>
+                <input type="text" id="quote-area" name="area" class="form-control" placeholder="e.g. 1500 sq ft / 3 BHK / 10,000 sq ft warehouse" maxlength="80">
+              </div>
+
+              <!-- Location -->
+              <div class="form-group" id="group-quote-location">
+                <label for="quote-location" class="form-label">Project Location / Area in Pune *</label>
+                <input type="text" id="quote-location" name="location" class="form-control" placeholder="e.g. Kothrud, Hinjewadi, Hadapsar, Pune" required maxlength="100">
+                <div class="form-error-feedback" id="quote-location-err" aria-live="polite">⚠️ Please enter your project location in Pune</div>
+              </div>
+
+              <!-- Project Details -->
+              <div class="form-group col-full">
+                <label for="quote-details" class="form-label">Project Details &amp; Specific Requirements</label>
+                <textarea id="quote-details" name="details" class="form-control" rows="3" placeholder="Describe the work required, timeline, or any specific challenges..." maxlength="800"></textarea>
+              </div>
+            </div>
+
+            <div class="form-submit-row">
+              <button type="submit" class="btn btn-secondary btn-block">
+                <span>SEND REQUEST ON WHATSAPP</span>
+                <span aria-hidden="true">⚡</span>
+              </button>
+              
+              <div class="form-security-badge">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                <span>256-Bit SSL Encrypted &amp; Spam Protected. Your data is strictly confidential.</span>
+              </div>
+
+              <p class="form-disclaimer">
+                ✓ Connects directly with Prafulla Zanzane on WhatsApp (8080305801). No middlemen.
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOK A SERVICE SECTION -->
+    <section id="book" class="section book-service-section" aria-labelledby="book-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">RAPID SCHEDULING</div>
+          <h2 id="book-heading" class="section-title">Book an electrician visit in Pune.</h2>
+          <p class="section-subtitle">
+            Need urgent repair or scheduled servicing? Operating 9:00 AM – 5:00 PM with emergency response across Pune city. Connect instantly on WhatsApp.
+          </p>
+        </div>
+
+        <div class="book-form-card">
+          <!-- Status Banner for Security / Feedback -->
+          <div id="book-alert" class="form-status-alert" role="alert" aria-live="polite"></div>
+
+          <form id="booking-form" novalidate>
+            <!-- Anti-Spam Honeypot Field (Invisible to real users, traps bots) -->
+            <div class="hp-field" aria-hidden="true">
+              <label for="book-hp">Leave this empty</label>
+              <input type="text" id="book-hp" name="website_hp" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="form-grid">
+              
+              <!-- Name -->
+              <div class="form-group" id="group-book-name">
+                <label for="book-name" class="form-label">Your Name *</label>
+                <input type="text" id="book-name" name="name" class="form-control" placeholder="e.g. Amit Verma" required autocomplete="name" maxlength="80">
+                <div class="form-error-feedback" id="book-name-err" aria-live="polite">⚠️ Please enter your name</div>
+              </div>
+
+              <!-- Phone -->
+              <div class="form-group" id="group-book-phone">
+                <label for="book-phone" class="form-label">Phone Number *</label>
+                <input type="tel" id="book-phone" name="phone" class="form-control" placeholder="e.g. +91 98765 43210" required autocomplete="tel" inputmode="tel" maxlength="20">
+                <div class="form-error-feedback" id="book-phone-err" aria-live="polite">⚠️ Please enter a valid 10-digit phone number</div>
+              </div>
+
+              <!-- Service -->
+              <div class="form-group">
+                <label for="book-service" class="form-label">Service Type</label>
+                <select id="book-service" name="service" class="form-control">
+                  <option value="Emergency Breakdown Repair">Emergency Breakdown Repair</option>
+                  <option value="Expert Electrical Services">Expert Electrical Services</option>
+                  <option value="Electrical Repairs">Electrical Repairs / Short Circuit</option>
+                  <option value="Whole House Wiring">Whole House Wiring</option>
+                  <option value="Indoor & Outdoor Lighting">Indoor &amp; Outer Lighting</option>
+                  <option value="Residential Electrical">Residential Electrical Services</option>
+                  <option value="Commercial Electrical">Commercial Electrical Services</option>
+                  <option value="CCTV & Data Surveillance">CCTV &amp; Data Surveillance</option>
+                  <option value="Warehouse Electrical">Warehouse Electrification</option>
+                  <option value="Annual Maintenance / AMC">Annual Maintenance Contracts (AMC)</option>
+                  <option value="Earthing & Lightning Protection">Earthing &amp; Lightning Protection System</option>
+                </select>
+              </div>
+
+              <!-- Urgency -->
+              <div class="form-group">
+                <label for="book-urgency" class="form-label">Urgency Level *</label>
+                <select id="book-urgency" name="urgency" class="form-control">
+                  <option value="Urgent (Same-Day Needed)">🔴 Urgent (Same-Day Emergency Service)</option>
+                  <option value="Within 24-48 Hours">🟡 Within 24 – 48 Hours</option>
+                  <option value="Scheduled for later date">🟢 Scheduled for a specific date</option>
+                </select>
+              </div>
+
+              <!-- Preferred Date -->
+              <div class="form-group">
+                <label for="book-date" class="form-label">Preferred Date</label>
+                <input type="date" id="book-date" name="date" class="form-control">
+              </div>
+
+              <!-- Preferred Time -->
+              <div class="form-group">
+                <label for="book-time" class="form-label">Preferred Time Window (9 AM - 5 PM)</label>
+                <select id="book-time" name="time" class="form-control">
+                  <option value="Morning (9:00 AM - 1:00 PM)">Morning (9:00 AM – 1:00 PM)</option>
+                  <option value="Afternoon (1:00 PM - 5:00 PM)">Afternoon (1:00 PM – 5:00 PM)</option>
+                  <option value="Emergency Breakdown (Immediate)">Immediate (Emergency Breakdown Service)</option>
+                </select>
+              </div>
+
+              <!-- Service Address -->
+              <div class="form-group col-full" id="group-book-address">
+                <label for="book-address" class="form-label">Service Address &amp; Landmark *</label>
+                <input type="text" id="book-address" name="address" class="form-control" placeholder="House/Flat No., Building Name, Street, Landmark, Area" required maxlength="180">
+                <div class="form-error-feedback" id="book-address-err" aria-live="polite">⚠️ Please enter your service address in Pune</div>
+              </div>
+
+              <!-- Problem Description -->
+              <div class="form-group col-full" id="group-book-problem">
+                <label for="book-problem" class="form-label">Problem Description *</label>
+                <textarea id="book-problem" name="problem" class="form-control" rows="3" placeholder="Describe the issue (e.g. spark in breaker box, no power in master bedroom, burning smell...)" required maxlength="800"></textarea>
+                <div class="form-error-feedback" id="book-problem-err" aria-live="polite">⚠️ Please describe the electrical problem</div>
+              </div>
+            </div>
+
+            <div class="form-submit-row">
+              <button type="submit" class="btn btn-primary btn-block">
+                <span>BOOK SERVICE ON WHATSAPP</span>
+                <span aria-hidden="true">📅</span>
+              </button>
+
+              <div class="form-security-badge">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                <span>256-Bit SSL Encrypted &amp; Spam Protected. Direct contact with Prafulla Zanzane.</span>
+              </div>
+
+              <p class="form-disclaimer">
+                💡 <em>Tip: You can conveniently send photos or videos of the electrical problem directly on WhatsApp after booking.</em>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION (ACCESSIBLE ACCORDION) -->
+    <section id="faq" class="section" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">COMMON QUESTIONS</div>
+          <h2 id="faq-heading" class="section-title">Frequently asked questions.</h2>
+          <p class="section-subtitle">
+            Clear, straightforward answers about our services, response times, and engineering approach.
+          </p>
+        </div>
+
+        <div class="faq-wrap">
+          
+          <!-- Q1 -->
+          <details class="faq-item" name="faq-group">
+            <summary class="faq-summary">
+              <span>Do you provide same-day electrical service?</span>
+              <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="faq-content">
+              Yes. We provide same-day response for urgent electrical breakdowns, short circuits, and safety hazards depending on technician availability and location.
+            </div>
+          </details>
+
+          <!-- Q2 -->
+          <details class="faq-item" name="faq-group">
+            <summary class="faq-summary">
+              <span>Do you provide complete house wiring?</span>
+              <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="faq-content">
+              Yes. We manage turnkey residential wiring projects, including concealed conduit laying, circuit design, load balancing, distribution board setup, and testing for new and renovated homes.
+            </div>
+          </details>
+
+          <!-- Q3 -->
+          <details class="faq-item" name="faq-group">
+            <summary class="faq-summary">
+              <span>Do you work with commercial properties?</span>
+              <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="faq-content">
+              Yes. We provide complete commercial electrical fit-outs for offices, retail stores, healthcare clinics, and educational facilities, including three-phase panels and UPS backup circuits.
+            </div>
+          </details>
+
+          <!-- Q4 -->
+          <details class="faq-item" name="faq-group">
+            <summary class="faq-summary">
+              <span>Do you provide warehouse electrical services?</span>
+              <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="faq-content">
+              Yes. We install high-bay industrial lighting, overhead cable trays, 3-phase machinery distribution panels, and heavy-duty grounding systems in warehouses and factories.
+            </div>
+          </details>
+
+          <!-- Q5 -->
+          <details class="faq-item" name="faq-group">
+            <summary class="faq-summary">
+              <span>Do you provide CCTV installation?</span>
+              <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="faq-content">
+              Yes. We install high-definition IP cameras, network video recorders (NVRs), structured Cat6 cabling, and mobile app integration for residential and commercial security.
+            </div>
+          </details>
+
+          <!-- Q6 -->
+          <details class="faq-item" name="faq-group">
+            <summary class="faq-summary">
+              <span>Do you provide earthing and lightning protection?</span>
+              <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="faq-content">
+              Yes. We design and install chemical and copper plate earth pits, verify ground resistance with calibrated earth testers, and install lightning arresters to safeguard buildings.
+            </div>
+          </details>
+
+          <!-- Q7 -->
+          <details class="faq-item" name="faq-group">
+            <summary class="faq-summary">
+              <span>Do you offer annual maintenance contracts?</span>
+              <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="faq-content">
+              Yes. We offer customized Annual Maintenance Contracts (AMC) for commercial buildings, residential societies, and industrial units with routine inspections and priority emergency support.
+            </div>
+          </details>
+
+          <!-- Q8 -->
+          <details class="faq-item" name="faq-group">
+            <summary class="faq-summary">
+              <span>Can I send photos of an electrical problem?</span>
+              <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="faq-content">
+              Yes. You can send photos or short videos of your breaker panel, switchboard, or damaged electrical fixture directly to our WhatsApp number for preliminary assessment.
+            </div>
+          </details>
+
+          <!-- Q9 -->
+          <details class="faq-item" name="faq-group">
+            <summary class="faq-summary">
+              <span>Do you provide quotations before planned work?</span>
+              <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="faq-content">
+              Yes. For planned installations, rewiring, and fit-outs, we conduct an inspection and provide an itemized, transparent quotation before commencing any work.
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section" style="background-color: transparent; border-top: 1px solid var(--color-border);" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">GET IN TOUCH</div>
+          <h2 id="contact-heading" class="section-title">Speak directly with an electrical engineer.</h2>
+          <p class="section-subtitle">
+            Fast response, honest engineering consultations, and professional service across our coverage area.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Info Details -->
+          <div class="contact-info-card">
+            
+            <!-- Phone -->
+            <div class="contact-entry">
+              <div class="contact-icon-bubble" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <div class="contact-entry-title">Phone / WhatsApp</div>
+                <a href="tel:+918080305801" class="contact-entry-value cfg-phone-link cfg-phone-text">+91 80803 05801</a>
+              </div>
+            </div>
+
+            <!-- WhatsApp -->
+            <div class="contact-entry">
+              <div class="contact-icon-bubble" aria-hidden="true" style="color: #25D366;">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              </div>
+              <div>
+                <div class="contact-entry-title">WhatsApp Chat</div>
+                <a href="https://wa.me/918080305801" target="_blank" rel="noopener noreferrer" class="contact-entry-value cfg-wa-link">Chat on WhatsApp (8080305801)</a>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="contact-entry">
+              <div class="contact-icon-bubble" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <div class="contact-entry-title">Email Address</div>
+                <a href="mailto:zanzaneprafulla12@gmail.com" class="contact-entry-value cfg-email-link cfg-email-text">zanzaneprafulla12@gmail.com</a>
+              </div>
+            </div>
+
+            <!-- Service Area -->
+            <div class="contact-entry">
+              <div class="contact-icon-bubble" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <div class="contact-entry-title">Service Area &amp; Address</div>
+                <div class="contact-entry-value cfg-service-area">Pune City, Maharashtra</div>
+              </div>
+            </div>
+
+            <!-- Business Hours -->
+            <div class="contact-entry">
+              <div class="contact-icon-bubble" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <div class="contact-entry-title">Working Hours</div>
+                <div class="contact-entry-value cfg-hours" style="font-size: 0.95rem;">Monday – Saturday: 9:00 AM – 5:00 PM | Emergency Service Available</div>
+              </div>
+            </div>
+
+            <!-- Fast Contact Buttons -->
+            <div class="contact-quick-buttons">
+              <a href="tel:+918080305801" class="btn btn-primary cfg-phone-link">
+                <span>CALL 8080305801</span>
+              </a>
+              <a href="https://wa.me/918080305801" target="_blank" rel="noopener noreferrer" class="btn btn-secondary cfg-wa-link">
+                <span>WHATSAPP CHAT</span>
+              </a>
+              <a href="mailto:zanzaneprafulla12@gmail.com" class="btn btn-outline cfg-email-link">
+                <span>EMAIL US</span>
+              </a>
+              <a href="https://maps.google.com/?q=Pune%2C+Maharashtra" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                <span>VIEW IN GOOGLE MAPS</span>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Interactive Location / Map Card -->
+          <div class="map-card-wrapper">
+            <div style="position: relative; width: 100%; height: 100%; min-height: 380px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.12);">
+              <iframe 
+                src="https://maps.google.com/maps?q=Pune%2C+Maharashtra&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=&amp;output=embed" 
+                width="100%" 
+                height="100%" 
+                style="border:0; width: 100%; height: 100%; min-height: 380px;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Prafulla Electrical Services - Pune Service Location">
+              </iframe>
+              <div style="position: absolute; bottom: 12px; left: 12px; right: 12px; background: rgba(11, 27, 61, 0.92); backdrop-filter: blur(8px); padding: 10px 14px; border-radius: 8px; display: flex; align-items: center; justify-content: space-between; border: 1px solid rgba(0, 209, 255, 0.3);">
+                <span style="color: #FFFFFF; font-size: 0.85rem; font-weight: 600;">📍 Serving Pune City &amp; Nearby Areas</span>
+                <a href="https://maps.google.com/?q=Pune" target="_blank" rel="noopener noreferrer" style="color: #00D1FF; font-size: 0.8rem; text-decoration: underline; font-weight: 600;">Open Maps ↗</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top-grid">
+        
+        <!-- Brand Column -->
+        <div class="footer-brand">
+          <a href="#hero" class="logo-link" style="color: #FFFFFF;">
+            <img src="assets/images/logo.png" alt="Prafulla Electrical Services Logo" class="logo-img" width="44" height="44" loading="lazy" decoding="async">
+            <div class="logo-text-group">
+              <span class="logo-title cfg-company" style="color: #FFFFFF;">Prafulla Electrical Services</span>
+              <span class="logo-subtitle" style="color: var(--color-secondary);">Your Trusted Electrical Experts</span>
+            </div>
+          </a>
+          <p>
+            Certified electrical engineering services and professional contracting for residential, commercial, and warehouse properties across Pune city.
+          </p>
+          <!-- Official Visiting Card Showcase -->
+          <div class="about-visiting-card" aria-label="Official Business Card of Prafulla Electrical Services" style="background: transparent !important; padding: 0 !important; border: none !important; box-shadow: none !important;">
+            <img src="assets/images/business-card.jpg" alt="Prafulla Electrical Services Visiting Card - Prafulla Zanzane Pune" loading="lazy" decoding="async" width="1280" height="757" style="width: 420px; max-width: 100%; height: auto; display: block; margin: 18px 0 0 0;">
+          </div>
+          <div class="social-links-row">
+            <a id="social-instagram" class="social-icon-btn" href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a id="social-facebook" class="social-icon-btn" href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a id="social-linkedin" class="social-icon-btn" href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a id="social-youtube" class="social-icon-btn" href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="#hero" class="footer-link">Home</a></li>
+            <li><a href="#about" class="footer-link">About Prafulla Zanzane</a></li>
+            <li><a href="#services" class="footer-link">All Electrical Services</a></li>
+            <li><a href="#why-us" class="footer-link">Why Choose Us</a></li>
+            <li><a href="#projects" class="footer-link">Portfolio Projects</a></li>
+            <li><a href="#faq" class="footer-link">Frequently Asked Questions</a></li>
+            <li><a href="#contact" class="footer-link">Contact &amp; Location</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h4 class="footer-col-title">Our Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="#services" class="footer-link">Expert Electrical Services</a></li>
+            <li><a href="#services" class="footer-link">Electrical Repairs</a></li>
+            <li><a href="#services" class="footer-link">Whole House Wiring</a></li>
+            <li><a href="#services" class="footer-link">Indoor &amp; Outer Lighting</a></li>
+            <li><a href="#services" class="footer-link">Residential Services</a></li>
+            <li><a href="#services" class="footer-link">Commercial Installations</a></li>
+            <li><a href="#services" class="footer-link">CCTV &amp; Data Surveillance</a></li>
+            <li><a href="#services" class="footer-link">Warehouse Electrification</a></li>
+            <li><a href="#services" class="footer-link">Earthing &amp; Lightning Systems</a></li>
+            <li><a href="#services" class="footer-link">Annual Maintenance (AMC)</a></li>
+          </ul>
+        </div>
+
+        <!-- Credentials -->
+        <div>
+          <h4 class="footer-col-title">Credentials</h4>
+          <ul class="footer-links-list">
+            <li><a href="#credentials" class="footer-link">Government of India MSME</a></li>
+            <li><a href="#credentials" class="footer-link">Scope Global Skill University</a></li>
+            <li><a href="#credentials" class="footer-link">Electrical Engineering Qualified</a></li>
+            <li><button type="button" class="footer-link btn-view-credentials" style="text-align: left; padding: 0;">View Official Business Card</button></li>
+          </ul>
+        </div>
+
+        <!-- Contact Summary -->
+        <div>
+          <h4 class="footer-col-title">Contact Us</h4>
+          <ul class="footer-links-list">
+            <li><a href="tel:+918080305801" class="footer-link cfg-phone-link cfg-phone-text">+91 80803 05801</a></li>
+            <li><a href="https://wa.me/918080305801" target="_blank" rel="noopener noreferrer" class="footer-link cfg-wa-link">WhatsApp Direct: 8080305801</a></li>
+            <li><a href="mailto:zanzaneprafulla12@gmail.com" class="footer-link cfg-email-link cfg-email-text">zanzaneprafulla12@gmail.com</a></li>
+            <li><span class="footer-link cfg-service-area">Pune City, Maharashtra</span></li>
+            <li><span class="footer-link" style="font-size: 0.82rem; color: #94A3B8;">Hours: 9 AM – 5 PM (Emergency 24/7)</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div>
+          &copy; <span class="cfg-year">2026</span> <span class="cfg-company">Prafulla Electrical Services</span>. All rights reserved.
+        </div>
+        <div style="display: flex; gap: 16px;">
+          <span>Safety Code Compliant</span>
+          <span>•</span>
+          <span>MSME / SGSU Connected</span>
+          <span>•</span>
+          <span>Engineering Approach</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING QUICK ACTION BUTTONS -->
+  <aside class="floating-contact-bar" aria-label="Quick contact actions">
+    <a href="tel:+918080305801" class="floating-btn floating-btn-call cfg-phone-link" aria-label="Call Now">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    </a>
+    <a href="https://wa.me/918080305801" target="_blank" rel="noopener noreferrer" class="floating-btn floating-btn-wa cfg-wa-link" aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+    </a>
+  </aside>
+
+  <!-- CREDENTIALS VERIFICATION MODAL -->
+  <div id="credentials-modal" class="custom-modal" role="dialog" aria-modal="true" aria-labelledby="cred-modal-title">
+    <div class="modal-backdrop"></div>
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="cred-modal-title" class="modal-title">Official Verification &amp; Credentials</h3>
+        <button type="button" class="modal-close" aria-label="Close credentials modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <!-- Visiting Card in Modal -->
+        <div style="margin-bottom: 20px; border-radius: 8px; overflow: hidden; border: 1.5px solid rgba(245, 185, 28, 0.4); box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+          <img src="assets/images/business-card.jpg" alt="Prafulla Electrical Services - Official Visiting Card" loading="lazy" decoding="async" width="1280" height="757" style="width: 100%; height: auto; display: block;">
+        </div>
+
+        <p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 20px;">
+          Prafulla Zanzane operates <strong>Prafulla Electrical Services</strong> under strict ethical engineering codes and official governing registrations in Pune, Maharashtra.
+        </p>
+        
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div style="border: 1px solid var(--color-border); border-radius: 8px; padding: 16px; background: var(--color-bg);">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+              <strong style="color: var(--color-primary);">1. Government of India MSME</strong>
+              <span style="color: #16A34A; font-size: 0.8rem; font-weight: 700;">● Active Registration</span>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--color-text-muted);">
+              Affiliated enterprise with the Ministry of Micro, Small and Medium Enterprises (MSME). Official registration certificate scan can be viewed or shared upon formal request.
+            </p>
+          </div>
+
+          <div style="border: 1px solid var(--color-border); border-radius: 8px; padding: 16px; background: var(--color-bg);">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+              <strong style="color: var(--color-primary);">2. Scope Global Skill University (SGSU)</strong>
+              <span style="color: #16A34A; font-size: 0.8rem; font-weight: 700;">● Verified Partner</span>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--color-text-muted);">
+              Technical electrical skills development and industry certification partner.
+            </p>
+          </div>
+
+          <div style="border: 1px solid var(--color-border); border-radius: 8px; padding: 16px; background: var(--color-bg);">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+              <strong style="color: var(--color-primary);">3. Formal Electrical Engineering Qualification</strong>
+              <span style="color: #16A34A; font-size: 0.8rem; font-weight: 700;">● Academic Verified</span>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--color-text-muted);">
+              Formal Engineering Degree / Diploma ensuring safe load calculations, short-circuit calculations, and adherence to Indian Electricity Rules (IE Rules).
+            </p>
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <a href="https://wa.me/918080305801" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Chat on WhatsApp (8080305801)</a>
+          <a href="tel:+918080305801" class="btn btn-outline">Direct Call</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT SCRIPTS -->
+  <!-- 1. Centralized Business Configuration -->
+  <script src="assets/js/config.js"></script>
+
+  <!-- 2. Interactive 3D Card Engine (Hero Card Tilt, Specular Glare & Service Card Physics) -->
+  <script src="assets/js/card-3d.js"></script>
+
+  <!-- 3. Main UI, Config Hydration, Filtering, Forms & Navigation -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
